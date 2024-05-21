@@ -11,7 +11,7 @@ use green_kernels::types::EvalType;
 
 use rand::SeedableRng;
 
-const NPOINTS: usize = 1000;
+const NPOINTS: usize = 2000;
 
 pub fn laplace_f32_test_standard(c: &mut Criterion) {
     let mut rng = rand_chacha::ChaCha8Rng::seed_from_u64(0);

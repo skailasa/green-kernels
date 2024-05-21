@@ -333,10 +333,13 @@ pub fn evaluate_laplace_one_target<T: RlstScalar>(
                                 simd.mul_add(diff1, diff1, simd.mul(diff2, diff2)),
                             );
 
-                            let is_zero = simd.cmp_eq(square_sum, zero);
+                            // let is_zero = simd.cmp_eq(square_sum, zero);
 
-                            let inv_abs =
-                                simd.select(is_zero, zero, simd.approx_recip_sqrt(square_sum));
+
+                            // let inv_abs =
+                            //     simd.select(is_zero, zero, simd.approx_recip_sqrt(square_sum));
+
+                            let inv_abs = simd.approx_recip_sqrt(square_sum);
 
                             acc = simd.mul_add(inv_abs, c, acc);
                         }
