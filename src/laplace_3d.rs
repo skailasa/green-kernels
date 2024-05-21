@@ -334,6 +334,7 @@ pub fn evaluate_laplace_one_target<T: RlstScalar>(
                             );
 
                             let is_zero = simd.cmp_eq(square_sum, zero);
+
                             let inv_abs =
                                 simd.select(is_zero, zero, simd.approx_recip_sqrt(square_sum));
 
