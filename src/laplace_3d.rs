@@ -373,7 +373,7 @@ pub fn evaluate_laplace_one_target<T: RlstScalar>(
                     sources: sources.coerce(),
                     charges: charges.coerce(),
                 });
-                result[0] = T::from_real(to::<_, T::Real>(acc)).mul_real(m_inv_4pi);
+                result[0] += T::from_real(to::<_, T::Real>(acc)).mul_real(m_inv_4pi);
             } else {
                 panic!()
             }
