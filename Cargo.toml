@@ -31,7 +31,7 @@ approx = { version = "0.5", features = ["num-complex"] }
 rayon = "1.9"
 num = "0.4"
 num_cpus = "1"
-rlst = { git = "https://github.com/linalg-rs/rlst.git" }
+rlst = { git = "https://github.com/skailasa/rlst.git" }
 # rlst = { path = "../rlst", features = ["mpi"] }
 rand = "0.8.5"
 itertools = { version = "0.13.0", default-features = false }
@@ -40,7 +40,7 @@ pulp = { version = "0.21" }
 bytemuck = "1.16.0"
 hexf = "0.2.1"
 mpi = { version = "0.8.*", optional = true }
-bempp-distributed-tools = { git = "https://github.com/bempp/distributed_tools.git", optional = true }
+bempp-distributed-tools = { git = "https://github.com/skailasa/distributed_tools.git", optional = true }
 
 [dev-dependencies]
 criterion = { version = "0.5.1", features = ["html_reports"] }
